@@ -1,5 +1,7 @@
 package com.example.jardim_europa.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -48,6 +50,10 @@ public class MoradorService {
         } catch (Exception e) {
             throw new IllegalArgumentException("Erro ao cadastrar morador");
         }
+    }
+
+    public List<Morador> listarMoradores() {
+        return repository.findAll();
     }
 
     
